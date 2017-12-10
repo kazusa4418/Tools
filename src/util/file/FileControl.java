@@ -28,15 +28,17 @@ public class FileControl {
      * キャッチされた場合printStackTraceが呼ばれ例外の詳細情報を標準エラー出力から出力されます。
      *
      * @param file - 入出力を管理するFile型オブジェクト
+     * @throws java.io.IOException 入出力エラーが発生したとき
      */
     public FileControl(File file) throws IOException {
         this.file = file;
+        System.out.println();
             ois = new ObjectInputStream(new FileInputStream(file));
             oos = new ObjectOutputStream(new FileOutputStream(file));
     }
 
     /**
-     *
+     *うんこ
      * @param o - 書き込むオブジェクト
      */
     public void write(Object o) {
@@ -70,6 +72,8 @@ public class FileControl {
      * @return ストリームから読み込まれたオブジェクト
      */
     public Object read() throws IOException, ClassNotFoundException {
+        new BufferedReader(new InputStreamReader(System.in)).readLine();
+
         return ois.readObject();
     }
 }
