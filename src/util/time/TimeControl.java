@@ -65,6 +65,7 @@ public class TimeControl {
      * Even retrieving a record does not delete that record.
      * So, unless you intentionally delete the retrieved record,
      * this method will refer to the same record.
+     * <p>
      * If you do not want to use the retrieved record anymore,
      * delete the record using the remove method.
      *
@@ -77,42 +78,101 @@ public class TimeControl {
     }
 
     /**
-     * @param index
-     * @return
-     * @throws NotRecordException
+     * Take out one record.
+     * <p>
+     * The argument specifies the record to be acquired in saved record.
+     * Even retrieving a record does not delete that record.
+     * So, unless you intentionally delete the retrieved record,
+     * this method will refer to the same record.
+     * <p>
+     * If you do not want to use the retrieved record anymore,
+     * delete the record using the remove method.
+     * <p>
+     * An exception is thrown if the argument is greater
+     * than the number of records stored.
+     *
+     * @param index index of the element to return
+     * @return The first recorded record among the stored records.
+     * @throws NotRecordException If there is no record.
      */
     public LocalDateTime getRecord(int index) throws NotRecordException {
         recordsLengthCheck(index);
         return records.get(index);
     }
 
-    public void startRecord() {
+    /**
+     * Obtain the number of saved records.
+     *
+     * @return the number of saved records.
+     */
+    public int size() {
+        return records.size();
+    }
+
+    /**
+     * Set the start point for calculating the duration.
+     * This is the same as the start when measuring time
+     * such as stopwatch.
+     * <p>
+     * If you call this method with the start point already recorded,
+     * the start point that was originally recorded will be overwritten.
+     */
+    public void makeStartPoint() {
         this.start = LocalDateTime.now();
     }
 
-    public void endRecord() throws NullRecordException {
-        startPointNullCheck();
+    /**
+     * Set the end point for calculating the duration.
+     * This is the same as the start when measuring time
+     * such as stopwatch.
+     * <p>
+     * If you call this method with the end point already recorded,
+     * the end point that was originally recorded will be overwritten.
+     */
+    public void makeEndPoint() {
         this.end = LocalDateTime.now();
     }
 
+    /**
+     * Calculate the duration from the start point and the end point.
+     * <p>
+     * If the end point is newer than the start point,
+     * the calculation result is expressed in negative time.
+     * <p>
+     * An exception is thrown if the start point is null
+     * or the end point is null.
+     *
+     * @return Duration between start point and end point.
+     * @throws NullRecordException If start point or end point is null.
+     */
     public Duration getDuration() throws NullRecordException {
         startPointNullCheck();
         endPointNullCheck();
         return Duration.between(this.start, this.end);
     }
 
+    /*
+     * this method checks whether the specified index is not more than
+     * the number of stored record.
+     */
     private void recordsLengthCheck(int index) throws NotRecordException {
         if (records.size() <= index) {
             throw new NotRecordException("The specified record could not be found");
         }
     }
 
+    /*
+     * This method checks whether null is assigned to the start point.
+     */
     private void startPointNullCheck() throws NullRecordException {
         if (this.start == null) {
             throw new NullRecordException("StartPoint does not exist");
         }
     }
 
+    /*
+     * This method checks whether null is assigned to the end point.
+     */
     private void endPointNullCheck() throws NullRecordException {
         if (this.end == null) {
             throw new NullRecordException("EndPoint does not exist");
