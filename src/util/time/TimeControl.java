@@ -43,6 +43,7 @@ public class TimeControl {
     /**
      * Obtains the current time and holds it as one record.
      * The time is obtained from the system clock of the default time-zone.
+     * For details on how to retrieve saved records, see {@link #getRecord()}, {@link #getRecord(int)}
      * <p>
      * The record created by this method will be retained until
      * you intentionally delete it.
@@ -59,6 +60,7 @@ public class TimeControl {
 
     /**
      * Take out one record.
+     * Refer to {@link #record()} for storing records.
      * <p>
      * This method fetches the first record recorded by the makeRecord method.
      * <p>
@@ -79,6 +81,7 @@ public class TimeControl {
 
     /**
      * Take out one record.
+     * Refer to {@link #record()} for storing records.
      * <p>
      * The argument specifies the record to be acquired in saved record.
      * Even retrieving a record does not delete that record.
