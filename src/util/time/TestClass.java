@@ -11,7 +11,9 @@ public class TestClass {
         timer.record();
 
         LocalDateTime time = timer.getRecord(1);
+        time = timer.getRecord();
         System.out.println(time);
+        System.out.println(timer.size());
 
         timer.makeStartPoint();
         timer.makeEndPoint();

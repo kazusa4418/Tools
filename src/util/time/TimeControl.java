@@ -62,7 +62,7 @@ public class TimeControl {
      * Take out one record.
      * Refer to {@link #record()} for storing records.
      * <p>
-     * This method fetches the first record recorded by the makeRecord method.
+     * This method fetches the first record recorded by {@link #record()}.
      * <p>
      * Even retrieving a record does not delete that record.
      * So, unless you intentionally delete the retrieved record,
@@ -181,5 +181,4 @@ public class TimeControl {
             throw new NullRecordException("EndPoint does not exist");
         }
     }
-
 }
