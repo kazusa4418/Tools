@@ -34,8 +34,16 @@ public class Card {
      * @param suit   - カードのマークを指定するCardSuit型オブジェクト
      */
     public Card(CardNumber number, CardSuit suit) {
+        checkArgument(number, suit);
         this.number = number;
         this.suit = suit;
+    }
+
+    private void checkArgument(CardNumber number, CardSuit suit) {
+        if ((number.equals(CardNumber.JOKER) && !suit.equals(CardSuit.JOKER)) ||
+                (!number.equals(CardNumber.JOKER) && suit.equals(CardSuit.JOKER))) {
+            throw new IllegalArgumentException();
+        }
     }
 
     /**
@@ -45,23 +53,23 @@ public class Card {
      * それ以外の数が入力された場合例外が発生するので一般には使用しないでください。
      *
      * @param number - カードの数字を指定するint型変数 0-13まで使用し0はJOKER
-     * @param suit   - カードのマークを指定するint型変数 0-4まで使用し4はJOKER
+     * @param suit   - カードのマークを指定するint型変数 0-4まで使用し0はJOKER
      * @throws java.lang.ArrayIndexOutOfBoundsException 範囲外の値が引数に指定されたときに発生します。
      * @deprecated 範囲外の引数が与えられると正しく処理できません。
      *             別のコンストラクターを使用することを推奨します。
      */
     public Card(int number, int suit) {
+        checkArgument(number, suit);
         CardNumber[] numbers = CardNumber.values();
         CardSuit[] suits = CardSuit.values();
-        //与えられた引数のどちらかがJOKERを示すものであった場合JOKERカードを作る
-        //それ以外であれば与えられた引数から数字とマークをもったカードインスタンスを作る
-        if (numbers[number].ordinal() == 0 || suits[suit].ordinal() == 4) {
-            this.number = CardNumber.JOKER;
-            this.suit = CardSuit.JOKER;
-        } else {
-            this.number = numbers[number];
-            this.suit = suits[suit];
-        }
+        this.number = numbers[number];
+        this.suit = suits[suit];
+    }
+
+    private void checkArgument(int number, int suit) {
+        if (number == 0 && suit == 0) return;
+        if (number < 1 || suit < 1 || number > 13 || suit > 4)
+            throw new IllegalArgumentException();
     }
 
     /**
@@ -88,7 +96,7 @@ public class Card {
      * @param card - 比較するCard型インスタンスです。
      * @return お互いのインスタンスが同一のものであればtrueを返します。
      */
-    boolean equals(Card card) {
+    public boolean equals(Card card) {
         return card.number == this.number && card.suit == this.suit;
     }
 
@@ -115,10 +123,6 @@ public class Card {
      */
     public String toString(boolean flag) {
         //trueを受け取るとカードの数字を、falseを受け取るとマークを返す
-        if (flag) {
-            return "(" + this.number + ")";
-        } else {
-            return "(" + this.suit + ")";
-        }
+        return flag ? "(" + this.number + ")" : "(" + this.suit + ")";
     }
 }

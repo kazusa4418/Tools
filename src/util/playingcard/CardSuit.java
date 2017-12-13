@@ -10,11 +10,11 @@ package util.playingcard;
  * @see CardNumber
  */
 public enum CardSuit {
-    SPADE("スペード"),     //ordinal is 0
-    HEART("ハート"),       //ordinal is 1
-    DIAMOND("ダイヤ"),     //ordinal is 2
-    CLOVER("クローバー"),  //ordinal is 3
-    JOKER("JOKER");        //ordinal is 4
+    JOKER("JOKER"),        //ordinal is 0
+    SPADE("スペード"),     //ordinal is 1
+    HEART("ハート"),       //ordinal is 2
+    DIAMOND("ダイヤ"),     //ordinal is 3
+    CLOVER("クローバー");  //ordinal is 4
 
     //出力するときにこの変数に格納されている文字列が出力される
     private String suit;

@@ -37,11 +37,11 @@ public class CardStock extends ArrayList<Card> {
     public CardStock(int joker_number) {
         //52枚分のカードの各インスタンスを作成し、リストに格納する
         CardNumber[] numbers = CardNumber.values();
-        for (int i = 1; i < numbers.length; i++) {
-            this.add(new Card(numbers[i], CardSuit.SPADE));
-            this.add(new Card(numbers[i], CardSuit.HEART));
-            this.add(new Card(numbers[i], CardSuit.DIAMOND));
-            this.add(new Card(numbers[i], CardSuit.CLOVER));
+        CardSuit[] suits = CardSuit.values();
+        for (int i = 1; i < numbers.length; i++ ) {
+            for (int j = 1; i < suits.length; j++ ) {
+                this.add(new Card(numbers[i], suits[j]));
+            }
         }
         for (int i = 0; i < joker_number; i++) {
             this.add(new Card(CardNumber.JOKER, CardSuit.JOKER));
