@@ -3,71 +3,44 @@ package util.playingcard;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * CardStockƒNƒ‰ƒX‚ÍCardƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğ•¡”•Û‚µ‚ÄRD‚ğÀŒ»‚µ‚Ü‚·B
- *
- * @author kazusa4418
- * @see Card
- * @see ArrayList
- */
 public class CardStock extends ArrayList<Card> {
+    private final int JOKER_NUMBER;
 
-    /**
-     * JOKER‚ğœ‚­ƒgƒ‰ƒ“ƒv‚Åg‚í‚ê‚éƒJ[ƒh‚·‚×‚Ä‚ğCardŒ^ƒIƒuƒWƒFƒNƒg‚Æ‚µ‚Äì¬‚µList‚É•Û‚µ‚Ü‚·B
-     * ƒgƒ‰ƒ“ƒv‚ÌRD‚ğì‚é“®ì‚ğÀŒ»‚µ‚Ü‚·B
-     * ƒfƒtƒHƒ‹ƒg‚Å‚ÍJOKER‚Í2–‡“ü‚Á‚½ó‘Ô‚Åì¬‚³‚ê‚Ü‚·B
-     * ‰Šú‚ÌƒJ[ƒh‚Ì•À‚Ñ‚Í”‚Ì¬‚³‚¢‡,ƒ}[ƒN‚Ìã‚¢‡‚Åƒ\[ƒg‚³‚ê‚Ä‚¢‚Ü‚·B
-     *
-     * @author kazusa4418
-     * @see Card
-     * @see ArrayList
-     */
     public CardStock() {
         this(2);
     }
 
-    /**
-     * JOKER‚ğœ‚­ƒgƒ‰ƒ“ƒv‚Åg‚í‚ê‚éƒJ[ƒh‚·‚×‚Ä‚ğCardŒ^ƒIƒuƒWƒFƒNƒg‚Æ‚µ‚Äì¬‚µList‚É•Û‚µ‚Ü‚·B
-     * ƒgƒ‰ƒ“ƒv‚ÌRD‚ğì‚é“®ì‚ğÀŒ»‚µ‚Ü‚·B
-     * ˆø”‚É‚ÍRD‚É‚¢‚ê‚éJOKER‚Ì–‡”‚ğw’è‚µ‚Ü‚·B
-     * ˆø”‚É•‰‚Ì”‚ª“n‚³‚ê‚½ê‡‚É‚ÍJOKER‚ª0–‡‚Ìó‘Ô‚ÅƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚Ü‚·B
-     *
-     * @param joker_number - RD‚É‚¢‚ê‚éJOKER‚Ì–‡”‚ğintŒ^•Ï”‚Åw’è‚·‚é
-     */
-    public CardStock(int joker_number) {
-        //52–‡•ª‚ÌƒJ[ƒh‚ÌŠeƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚µAƒŠƒXƒg‚ÉŠi”[‚·‚é
+    public CardStock(int jokerNum) {
+        createStock(jokerNum);
+        JOKER_NUMBER = jokerNum;
+    }
+
+    private void createStock(int jokerNum) {
+        //52æšåˆ†ã®ã‚«ãƒ¼ãƒ‰ã®å„ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ä½œæˆã—ã€ãƒªã‚¹ãƒˆã«æ ¼ç´ã™ã‚‹
         CardNumber[] numbers = CardNumber.values();
         CardSuit[] suits = CardSuit.values();
         for (int i = 1; i < numbers.length; i++ ) {
-            for (int j = 1; i < suits.length; j++ ) {
+            for (int j = 1; j < suits.length; j++ ) {
                 this.add(new Card(numbers[i], suits[j]));
             }
         }
-        for (int i = 0; i < joker_number; i++) {
+        for (int i = 0; i < jokerNum; i++) {
             this.add(new Card(CardNumber.JOKER, CardSuit.JOKER));
         }
     }
 
-
-    /**
-     * ƒŠƒXƒg‚Ì0”Ô–Ú‚ÌCardŒ^ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-     * RD‚©‚çˆê–‡ƒJ[ƒh‚ğˆø‚­“®ì‚ğÀŒ»‚µ‚Ü‚·B
-     * CardStockƒIƒuƒWƒFƒNƒg‚É—v‘f‚ª‘¶İ‚µ‚È‚©‚Á‚½ê‡—áŠO‚ªƒXƒ[‚³‚ê‚Ü‚·B
-     *
-     * @return CardŒ^ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-     * @throws ArrayIndexOutOfBoundsException —v‘f‚ª‘¶İ‚µ‚È‚¢ê‡‚ÉtakeCardƒƒ\ƒbƒh‚ªŒÄ‚Î‚ê‚½ê‡
-     */
     public Card takeCard() {
         Card card = this.get(0);
         this.remove(0);
         return card;
     }
 
-    /**
-     * ƒŠƒXƒg‚Ì—v‘f‚ğƒ‰ƒ“ƒ_ƒ€‚É“ü‚ê‘Ö‚¦‚Ü‚·B
-     * RD‚ğƒVƒƒƒbƒtƒ‹‚·‚é“®ì‚ğÀŒ»‚µ‚Ü‚·B
-     */
     public void shuffle() {
         Collections.shuffle(this);
+    }
+
+    public void initialize() {
+        this.clear();
+        createStock(JOKER_NUMBER);
     }
 }

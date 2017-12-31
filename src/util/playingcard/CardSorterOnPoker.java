@@ -3,8 +3,8 @@ package util.playingcard;
 import java.util.Comparator;
 
 /**
- * CardSorterOnPoker‚ÍList‚È‚Ç‚Åƒ\[ƒg‚ğs‚¤Û‚Éƒ\[ƒg•û–@‚ğw’è‚µ‚Ü‚·B
- * ƒ\[ƒg‡˜‚Íƒ|[ƒJ[‚Ìƒ‹[ƒ‹‚É]‚Á‚ÄƒJ[ƒh‚Ì‹­ã‚ğ”äŠr‚µƒ\[ƒg‚µ‚Ü‚·B
+ * CardSorterOnPokerã¯Listãªã©ã§ã‚½ãƒ¼ãƒˆã‚’è¡Œã†éš›ã«ã‚½ãƒ¼ãƒˆæ–¹æ³•ã‚’æŒ‡å®šã—ã¾ã™ã€‚
+ * ã‚½ãƒ¼ãƒˆé †åºã¯ãƒãƒ¼ã‚«ãƒ¼ã®ãƒ«ãƒ¼ãƒ«ã«å¾“ã£ã¦ã‚«ãƒ¼ãƒ‰ã®å¼·å¼±ã‚’æ¯”è¼ƒã—ã‚½ãƒ¼ãƒˆã—ã¾ã™ã€‚
  *
  * @author kazusa4418
  * @see Card
@@ -12,42 +12,21 @@ import java.util.Comparator;
  */
 public class CardSorterOnPoker implements Comparator<Card> {
     /**
-     * ó‚¯æ‚Á‚½2‚Â‚ÌCardŒ^ƒCƒ“ƒXƒ^ƒ“ƒX‚ğ”äŠr‚µ‚Ü‚·B
+     * å—ã‘å–ã£ãŸ2ã¤ã®Cardå‹ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’æ¯”è¼ƒã—ã¾ã™ã€‚
      *
-     * @param card1 - ”äŠr‚·‚éCardŒ^ƒCƒ“ƒXƒ^ƒ“ƒX‚Å‚·B
-     * @param card2 - ”äŠr‚³‚ê‚éCardŒ^ƒCƒ“ƒXƒ^ƒ“ƒX‚Å‚·B
-     * @return ”äŠr‚·‚éƒCƒ“ƒXƒ^ƒ“ƒX‚ª‘å¬‚É‚æ‚Á‚Ä0, 1, -1 ‚Ì‚¢‚¸‚ê‚©‚ª•Ô‹p‚³‚ê‚Ü‚·B
+     * @param card1 - æ¯”è¼ƒã™ã‚‹Cardå‹ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã§ã™ã€‚
+     * @param card2 - æ¯”è¼ƒã•ã‚Œã‚‹Cardå‹ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã§ã™ã€‚
+     * @return æ¯”è¼ƒã™ã‚‹ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå¤§å°ã«ã‚ˆã£ã¦0, 1, -1 ã®ã„ãšã‚Œã‹ãŒè¿”å´ã•ã‚Œã¾ã™ã€‚
      */
     public int compare(Card card1, Card card2) {
-        //“¯‚¶ƒJ[ƒh‚Å‚ ‚é‚È‚ç0‚ğ•Ô‚·
-        if (card1.equals(card2)) {
-            return 0;
-        }
-        //©g‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªJOKER‚È‚ç‚Î1‚ğ•Ô‚·
-        if (card1.getNumber().ordinal() == 0) {
+        if (card1.getNum() == CardNumber.JOKER)
             return 1;
-        }
-        //”äŠr‘ÎÛ‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªJOKER‚È‚ç‚Î-1‚ğ•Ô‚·
-        if (card2.getNumber().ordinal() == 0) {
+        if (card2.getNum() == CardNumber.JOKER)
             return -1;
-        }
-        //©g‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªA‚È‚ç‚Î1‚ğ•Ô‚·
-        if (card1.getNumber().ordinal() == 1) {
+        if (card1.getNum() == CardNumber.num1)
             return 1;
-        }
-        //”äŠr‘ÎÛ‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªA‚È‚ç‚Î-1‚ğ•Ô‚·
-        if (card2.getNumber().ordinal() == 1) {
+        if (card2.getNum() == CardNumber.num1)
             return -1;
-        }
-        //©g‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Ì‚Ù‚¤‚ª‘å‚«‚¢”‚È‚ç1‚ğ•Ô‚·
-        if (card1.getNumber().ordinal() > card2.getNumber().ordinal()) {
-            return 1;
-        }
-        //”äŠr‘ÎÛ‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Ì‚Ù‚¤‚ª‘å‚«‚¢”‚È‚ç-1‚ğ•Ô‚·
-        if (card1.getNumber().ordinal() < card2.getNumber().ordinal()) {
-            return -1;
-        }
-        //ƒJ[ƒh‚Ì”š‚ª“¯‚¶‚È‚çAƒJ[ƒh‚Ìƒ}[ƒN‚Å‹­‚³‚ğ‚Í‚©‚é
-        return Integer.compare(card1.getSuit().ordinal(), card2.getSuit().ordinal());
+        return Integer.compare(card1.strength(), card2.strength());
     }
 }

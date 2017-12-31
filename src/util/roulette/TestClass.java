@@ -1,5 +1,7 @@
 package util.roulette;
 
+import util.playingcard.CardNumber;
+
 public class TestClass {
     public static void main(String[] args) {
         //ここではルーレットパッケージに属するビンゴ関連クラスのテストを行うと同時に
@@ -25,6 +27,8 @@ public class TestClass {
 
         //取り出したボールなどをすべてマシンに戻してマシンをインスタンス化したときの状態に戻す
         bm.initialize();
+
+        CardNumber.values();
 
     }
 }
