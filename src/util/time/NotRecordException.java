@@ -2,7 +2,7 @@ package util.time;
 
 class NotRecordException extends TimeControlException {
     NotRecordException() {
-        super("ƒŒƒR[ƒh‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B");
+        super("ãƒ¬ã‚³ãƒ¼ãƒ‰ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚");
     }
 
     NotRecordException(String text) {

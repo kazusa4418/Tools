@@ -1,22 +1,22 @@
 package util.roulette;
 
 class BingoBall implements Cloneable {
-    //�C���X�^���X�����{�[���̐���
+    //インスタンスが持つボールの数字
     private int number;
 
-    //�C���X�^���X�������Ƃ��Ɉ����Ń{�[���̐������w�肷��
+    //インスタンス化されるときに引数でボールの数字を指定する
     BingoBall(int number) {
         this.number = number;
     }
 
-    //���̃C���X�^���X�̎��{�[���̐������擾����
+    //このインスタンスの持つボールの数字を取得する
     int getNumber() {
         return number;
     }
 
-    //�����Ƃ��̃C���X�^���X�̃{�[���̐����������������肷��
-    //�����ŗ^����ꂽ�I�u�W�F�N�g��BingoBall�N���X�̃C���X�^���X�ł͂Ȃ������ꍇ�A
-    //�܂��̓{�[���̐�������v���Ȃ������ꍇ��false
+    //引数とこのインスタンスのボールの数字が等しいか判定する
+    //引数で与えられたオブジェクトがBingoBallクラスのインスタンスではなかった場合、
+    //またはボールの数字が一致しなかった場合はfalse
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof BingoBall)) return false;
@@ -24,22 +24,22 @@ class BingoBall implements Cloneable {
         return this.getNumber() == ball.getNumber();
     }
 
-    //����System.out.println�ł��̃C���X�^���X���o�͂��ꂽ�Ƃ���
-    //�{�[���̐�������ʂɏo�͂����悤�ɂ��Ă邾���B
-    //����System.out.println���\�b�h�͈����ŗ^����ꂽ�C���X�^���X��
-    //toString()���\�b�h���Ă�Ŏ擾�����String�^�I�u�W�F�N�g����ʂɏo�͂��Ă�B
-    //�����炱���������ɐ�����������ŕԋp�����悤��toString()���Ē�`���Ă����Ȃ���
-    //println�ŌĂ΂ꂽ�Ƃ��ɂ��̃C���X�^���X�̃n�b�V���R�[�h���Ă����킯�̕�����Ȃ�
-    //�����񂪉�ʂɏo�͂���Ă��܂��B
+    //ただSystem.out.printlnでこのインスタンスが出力されたときに
+    //ボールの数字が画面に出力されるようにしてるだけ。
+    //実はSystem.out.printlnメソッドは引数で与えられたインスタンスの
+    //toString()メソッドを呼んで取得されるString型オブジェクトを画面に出力してる。
+    //だからこういう風に数字が文字列で返却されるようにtoString()を再定義してあげないと
+    //printlnで呼ばれたときにこのインスタンスのハッシュコードっていうわけの分からない
+    //文字列が画面に出力されてしまう。
     @Override
     public String toString() {
         return String.valueOf(number);
     }
 
-    //����̓N���[���������Ă����ĎQ�ƌ^�̃I�u�W�F�N�g���Q�Ɛ���R�s�[����̂ł͂Ȃ�
-    //�C���X�^���X���̂��t���R�s�[�������Ƃ��Ɏg�p����B
-    //���p����g���ƃV�����[�E�R�s�[�ł͂Ȃ��f�B�[�v�E�R�s�[�������Ƃ��ɌĂ΂�邗
-    //�����Q�Ƃ���ʂ�ɂ��Ă���Ȃ�ɏڂ����Ȃ���"??????"��ԂɂȂ�Ǝv�����ǈꉞ�����Ƃ��B
+    //これはクローン処理っていって参照型のオブジェクトを参照先をコピーするのではなく
+    //インスタンス自体をフルコピーしたいときに使用する。
+    //専門用語を使うとシャロー・コピーではなくディープ・コピーしたいときに呼ばれるｗ
+    //正直参照うんぬんについてそれなりに詳しくないと"??????"状態になると思うけど一応書いとく。
     @Override
     protected BingoBall clone() throws CloneNotSupportedException {
         return (BingoBall) super.clone();

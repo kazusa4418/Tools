@@ -4,28 +4,28 @@ import util.playingcard.CardNumber;
 
 public class TestClass {
     public static void main(String[] args) {
-        //�����ł̓��[���b�g�p�b�P�[�W�ɑ�����r���S�֘A�N���X�̃e�X�g���s���Ɠ�����
-        //���̎g�p���@�ɂ��Đ������܂��B
-        //�����ŏЉ�Ă��郁�\�b�h�̂ق��ɂ����\�b�h������܂��B
-        //�N���X���������Ēǉ���������ł��܂��B
-        //����A�\�[�X�t�@�C�����̂����Ă݂Ă��������B
+        //ここではルーレットパッケージに属するビンゴ関連クラスのテストを行うと同時に
+        //その使用方法について説明します。
+        //ここで紹介しているメソッドのほかにもメソッドがあります。
+        //クラスをいじって追加したりもできます。
+        //是非、ソースファイルをのぞいてみてください。
 
-        //�r���S������̂Ɏg���r���S�}�V�[���I�Ȃ��̂��C���X�^���X��
-        //������BingoMachine�N���X�̎��������Ă��������B
-        //���Ȃ݂ɃR���X�g���N�^�Ȃ̂ŃR���X�g���N�^�Ə����Ă���Ƃ���̃��\�b�h�I�Ȃ��̂����ĂˁB
+        //ビンゴをするのに使うビンゴマシーン的なものをインスタンス化
+        //引数はBingoMachineクラスの実装を見てください。
+        //ちなみにコンストラクタなのでコンストラクタと書いてあるところのメソッド的なものを見てね。
         BingoMachine bm = new BingoMachine(20);
 
-        //�r���S�}�V�[���̂Ȃ��̃{�[�����V���b�t������
+        //ビンゴマシーンのなかのボールをシャッフルする
         bm.shuffle();
 
-        //�r���S�}�V�[���̂Ȃ��̃{�[��������o��
+        //ビンゴマシーンのなかのボールを一つ取り出す
         BingoBall ball = bm.getBall();
-        bm.removeBall(); //�����ł͎擾�����r���S�{�[�����}�V���̂Ȃ�����폜���Ă�
+        bm.removeBall(); //ここでは取得したビンゴボールをマシンのなかから削除してる
 
-        //���o�����{�[������ʂɏo�͂���
+        //取り出したボールを画面に出力する
         System.out.println(ball);
 
-        //���o�����{�[���Ȃǂ����ׂă}�V���ɖ߂��ă}�V�����C���X�^���X�������Ƃ��̏�Ԃɖ߂�
+        //取り出したボールなどをすべてマシンに戻してマシンをインスタンス化したときの状態に戻す
         bm.initialize();
 
         CardNumber.values();

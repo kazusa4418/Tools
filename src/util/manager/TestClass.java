@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class TestClass {
     public static void main(String[] args) {
         TimeManager timer = new TimeManager();
-        //Œ»İ‚Ì‚ğ‹L˜^‚·‚é
+        //ç¾åœ¨ã®æ™‚åˆ»ã‚’è¨˜éŒ²ã™ã‚‹
         timer.record();
         timer.record();
 
@@ -22,7 +22,7 @@ public class TestClass {
 
         TimeManager timer2 = new TimeManager();
         timer.makeEndPoint();
-        System.out.println("DEBUG“Ç‚Ü‚ê‚Ä‚¢‚Ü‚·");
+        System.out.println("DEBUGèª­ã¾ã‚Œã¦ã„ã¾ã™");
         Duration duration2 = timer2.getDuration();
         System.out.println(duration2);
     }

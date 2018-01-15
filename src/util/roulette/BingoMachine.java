@@ -5,39 +5,39 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/* �߂��Ⴍ����R�[�h�������悤�ɂ݂��邾��H�H�H�H�H�H�H�H�H�H
- * ���͂قƂ�ǃR�[�h�̐�������۸��т͐��\�s���������ĂȂ��񂾂��B�B�B
+/* めちゃくちゃコードが長いようにみえるだろ？？？？？？？？？？
+ * 実はほとんどコードの説明でﾌﾟﾛｸﾞﾗﾑは数十行しか書いてないんだぜ。。。
  */
 
 /**
- * BingoMachine�N���X�̓r���S�Q�[���ɂ�����r���S�{�[���������_���ɓf���o��
- * �@�B�̋@�\�Ɩ�����񋟂��܂��B
- * �R���X�g���N�^�Ŏw�肳�ꂽ���܂ł̊e������BingoBall�^�I�u�W�F�N�g��ێ����A
- * ���ꂼ��ɑ΂��Ď擾��폜�̑�����s�����Ƃ��\�ł��B
+ * BingoMachineクラスはビンゴゲームにおけるビンゴボールをランダムに吐き出す
+ * 機械の機能と役割を提供します。
+ * コンストラクタで指定された数までの各数字のBingoBall型オブジェクトを保持し、
+ * それぞれに対して取得や削除の操作を行うことが可能です。
  */
 public class BingoMachine {
     private int size;
     private List<BingoBall> balls = new ArrayList<>();
 
     /**
-     * �^����ꂽ��������BingoMachine���쐬���܂��B
-     * �����͂��̃N���X�̃C���X�^���X���ێ�����{�[���̐����w�肵�܂��B
-     * �����A�����ɂQ�O���w�肳�ꂽ�̂ł���΁A���̃N���X�̕ێ�����
-     * BingoBall�^�I�u�W�F�N�g��1~20�܂ł̊e������\������20�ł��B
+     * 与えられた引数からBingoMachineを作成します。
+     * 引数はこのクラスのインスタンスが保持するボールの数を指定します。
+     * もし、引数に２０が指定されたのであれば、このクラスの保持する
+     * BingoBall型オブジェクトは1~20までの各数字を表現する20個です。
      *
-     * �����l�ł͊eBingoBall�^�I�u�W�F�N�g�͏����ɐ��񂳂�Ċi�[����܂��B
+     * 初期値では各BingoBall型オブジェクトは昇順に整列されて格納されます。
      *
-     * @throws IllegalArgumentException ���̈������^����ꂽ�Ƃ�
-     * @param number �ێ�����BingoBall�^�I�u�W�F�N�g�̐����w�肵�܂��B
+     * @throws IllegalArgumentException 負の引数が与えられたとき
+     * @param number 保持するBingoBall型オブジェクトの数を指定します。
      */
     public BingoMachine(int number) {
-        //���ꂪ�R���X�g���N�^
-        //���ꂪ�R���X�g���N�^
-        //���ꂪ�R���X�g���N�^
-        //���ꂪ�R���X�g���N�^
-        //���ꂪ�R���X�g���N�^
-        //���ꂪ�R���X�g���N�^
-        if (number < 0) throw new IllegalArgumentException("�����̒l���s���ł��B");
+        //これがコンストラクタ
+        //これがコンストラクタ
+        //これがコンストラクタ
+        //これがコンストラクタ
+        //これがコンストラクタ
+        //これがコンストラクタ
+        if (number < 0) throw new IllegalArgumentException("引数の値が不正です。");
         size = number;
         for (int i = 1; i <= number; i++ ) {
             balls.add(new BingoBall(i));
@@ -45,23 +45,23 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ����Ă���BingoBall�^�I�u�W�F�N�g���V���b�t�����܂��B
-     * �R���X�g���N�^��BingoBall�^�I�u�W�F�N�g���쐬���ꂽ�Ƃ��A
-     * ���̕��т͏����Ő��񂳂�Ă��܂��B
-     * ���������āA���̃N���X�̃C���X�^���X���쐬����Ă��̃��\�b�h��
-     * �Ă΂ꂽ�Ƃ��A�����_���Ȑ����̋ʂ̏o�͂������\�ɂȂ�܂��B
+     * 保持しているBingoBall型オブジェクトをシャッフルします。
+     * コンストラクタでBingoBall型オブジェクトが作成されたとき、
+     * その並びは昇順で整列されています。
+     * したがって、このクラスのインスタンスが作成されてこのメソッドが
+     * 呼ばれたとき、ランダムな数字の玉の出力を実現可能になります。
      */
     public void shuffle() {
         Collections.shuffle(balls);
     }
 
     /**
-     * �ێ����Ă���BingoBall�^�I�u�W�F�N�g���I�u�W�F�N�g�̎������̏����Ƀ\�[�g���܂��B
+     * 保持しているBingoBall型オブジェクトをオブジェクトの持つ数字の昇順にソートします。
      */
     public void sortAsc() {
-        /* �������ǂ݂Â炢�ł����g���ƕ֗��ȋL�@��p���Ă��܂��B
-         * �����_��������Ȃ��Ǝ����ɂ��������Ȃ��Ǝv���܂��B
-         * ���̋L�@�ɂ��Ă�����x�׋�����܂ł��̃R�[�h�ɂ͐G��Ȃ����Ƃ𐄏����܂��B
+        /* くっそ読みづらいですが使うと便利な記法を用いています。
+         * ラムダ式をしらないと呪文にしか見えないと思います。
+         * この記法についてある程度勉強するまでこのコードには触らないことを推奨します。
          */
         balls.sort((BingoBall ball1, BingoBall ball2) -> {
                         if (ball1.equals(ball2)) return 0;
@@ -69,30 +69,30 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ����Ă���BingoBall�^�I�u�W�F�N�g���I�u�W�F�N�g�̎������̍~���Ƀ\�[�g���܂��B
+     * 保持しているBingoBall型オブジェクトをオブジェクトの持つ数字の降順にソートします。
      */
     public void sortDesc() {
-        //�������B�B�B
+        //同じく。。。
         balls.sort((BingoBall ball1, BingoBall ball2) -> {
                         if(ball1.equals(ball2)) return 0;
                         return (ball1.getNumber() > ball2.getNumber()) ? -1 : 1; });
     }
 
     /**
-     * �ێ����Ă���BingoBall�^�I�u�W�F�N�g���\�[�g���܂��B
-     * �\�[�g��i�ɂ��Ă͌Ăяo�����������ŗ^���܂��B
+     * 保持しているBingoBall型オブジェクトをソートします。
+     * ソート手段については呼び出し側が引数で与えます。
      *
-     * @param sorter Comparator<BingoBall>�����������\�[�g�N���X�B
+     * @param sorter Comparator<BingoBall>を実装したソートクラス。
      */
     public void sort(Comparator<BingoBall> sorter) {
         balls.sort(sorter);
     }
 
     /**
-     * �ۑ�����Ă���BingoBall�^�I�u�W�F�N�g��List�Ŏ擾���܂��B
-     * List�̗v�f�̓f�B�[�v�E�R�s�[����Ă��܂��B
+     * 保存されているBingoBall型オブジェクトをListで取得します。
+     * Listの要素はディープ・コピーされています。
      *
-     * @return �ۑ�����Ă���BingoBall�^�I�u�W�F�N�g���i�[����Ă���List
+     * @return 保存されているBingoBall型オブジェクトが格納されているList
      */
     public List<BingoBall> getBallList() {
         List<BingoBall> ballList = new ArrayList<>();
@@ -107,16 +107,16 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ�����Ă���BingoBall�^�I�u�W�F�N�g�̂Ȃ������v�f���擾���܂��B
-     * �w�肳���v�f��\���C���f�b�N�X��0���w�肳��܂��B
-     * �v�f���\�[�g����Ă���ꍇ�͗v�f���\�[�g���Ɏ��o���̂Ɏg�p�ł��܂����A
-     * �V���b�t������Ă��܂��Ă���ꍇ�́A���o���v�f����肷�邱�Ƃ͂ł��܂���B
+     * 保持されているBingoBall型オブジェクトのなかから一つ要素を取得します。
+     * 指定される要素を表すインデックスは0が指定されます。
+     * 要素がソートされている場合は要素をソート順に取り出すのに使用できますが、
+     * シャッフルされてしまっている場合は、取り出す要素を特定することはできません。
      *
-     * �܂��́A�v�f�͎擾����邾���ł���A�폜�͂���܂���B
-     * �폜���s�킸���̃��\�b�h��A���ŌĂяo���Ă��擾�����v�f�͓����ł��B
+     * または、要素は取得されるだけであり、削除はされません。
+     * 削除を行わずこのメソッドを連続で呼び出しても取得される要素は同じです。
      *
-     * @throws BallNotFoundException ����v�f�����݂��Ȃ��Ƃ�
-     * @return 0�Ԗڂ̕ۑ�����Ă���BingoBall�^�I�u�W�F�N�g
+     * @throws BallNotFoundException 一つも要素が存在しないとき
+     * @return 0番目の保存されているBingoBall型オブジェクト
      */
 
     public BingoBall getBall() {
@@ -125,17 +125,17 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ�����Ă���BingoBall�^�I�u�W�F�N�g�̂Ȃ������v�f���擾���܂��B
-     * �w�肳���v�f��\���C���f�b�N�X�͈����ŗ^�����܂��B
-     * �v�f���\�[�g����Ă���ꍇ�́A����̈Ӑ}�����I�u�W�F�N�g���擾���邱�Ƃ�
-     * �\�ł��B
-     * �V���b�t����ł����{@link #getBall()}���\�b�h�ƂȂ��ς��͂���܂���B
-     * ����́A�擾����v�f���C���f�b�N�X�Ŏw�肵���Ƃ��Ă��ŏ��̗v�f�����o�����Ƃ��Ă�
-     * ���ʂ𐄑����邱�Ƃ��ł��Ȃ�����ł��B
+     * 保持されているBingoBall型オブジェクトのなかから一つ要素を取得します。
+     * 指定される要素を表すインデックスは引数で与えられます。
+     * 要素がソートされている場合は、特定の意図したオブジェクトを取得することが
+     * 可能です。
+     * シャッフル後であれば{@link #getBall()}メソッドとなんら変わりはありません。
+     * それは、取得する要素をインデックスで指定したとしても最初の要素を取り出したとしても
+     * 結果を推測することができないからです。
      *
-     * @param index ���o���v�f�̃C���f�b�N�X
-     * @throws BallNotFoundException �w�肵���C���f�b�N�X�ɗv�f�����݂��Ȃ��Ƃ�
-     * @return �擾����BingoBall�^�I�u�W�F�N�g
+     * @param index 取り出す要素のインデックス
+     * @throws BallNotFoundException 指定したインデックスに要素が存在しないとき
+     * @return 取得したBingoBall型オブジェクト
      */
     public BingoBall getBall(int index) {
         if (index < 0 || index >= balls.size())
@@ -144,12 +144,12 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ�����Ă���BingoBall�^�I�u�W�F�N�g�̂�������폜���܂��B
-     * �w�肳���C���f�b�N�X��0�ł��B
-     * �v�f���\�[�g����Ă���ꍇ�́A�\�[�g���ɗv�f���폜���邱�Ƃ��\�ł��B
-     * �v�f���V���b�t������Ă���̂ł���΍폜����v�f�̓����_���Ɠ������Ȃ�܂��B
+     * 保持されているBingoBall型オブジェクトのうち一つを削除します。
+     * 指定されるインデックスは0です。
+     * 要素がソートされている場合は、ソート順に要素を削除することが可能です。
+     * 要素がシャッフルされているのであれば削除する要素はランダムと等しくなります。
      *
-     * @throws BallNotFoundException ����v�f�����݂��Ȃ��Ƃ�
+     * @throws BallNotFoundException 一つも要素が存在しないとき
      */
     public void removeBall() {
         if (balls.size() == 0) throw new BallNotFoundException();
@@ -157,15 +157,15 @@ public class BingoMachine {
     }
 
     /**
-     * �ێ�����Ă���BingoBall�^�I�u�W�F�N�g�̂�������폜���܂��B
-     * �����ō폜����v�f�̃C���f�b�N�X���w�肵�܂��B
-     * �v�f���\�[�g����Ă���ꍇ�́A����̈Ӑ}�����I�u�W�F�N�g���폜���邱�Ƃ��\�ł��B
-     * �V���b�t����ł���΁A{@link #removeBall()}���\�b�h�ƂȂ��ς��͂���܂���B
-     * ����́A�폜����v�f���C���f�b�N�X�Ŏw�肵���Ƃ��Ă��ŏ��̗v�f���폜�����Ƃ��Ă�
-     * ���ʂ𐄑����邱�Ƃ��ł��Ȃ�����ł��B
+     * 保持されているBingoBall型オブジェクトのうち一つを削除します。
+     * 引数で削除する要素のインデックスを指定します。
+     * 要素がソートされている場合は、特定の意図したオブジェクトを削除することが可能です。
+     * シャッフル後であれば、{@link #removeBall()}メソッドとなんら変わりはありません。
+     * それは、削除する要素をインデックスで指定したとしても最初の要素を削除したとしても
+     * 結果を推測することができないからです。
      *
-     * @throws BallNotFoundException �w�肵���C���f�b�N�X�ɗv�f�����݂��Ȃ��Ƃ�
-     * @param index �폜����v�f�̃C���f�b�N�X
+     * @throws BallNotFoundException 指定したインデックスに要素が存在しないとき
+     * @param index 削除する要素のインデックス
      */
     public void removeBall(int index) {
         if (index < 0 || index >= balls.size()) throw new BallNotFoundException();
@@ -173,8 +173,8 @@ public class BingoMachine {
     }
 
     /**
-     * ���̃C���X�^���X�����ꂽ�Ƃ���BingoBall�^�I�u�W�F�N�g�̕ێ���Ԃɕ������܂��B
-     * �v�f���폜���ꂽ�肵����ł����̃��\�b�h���ĂԂ��Ƃŏ��������ꂽ��Ԃɖ߂����Ƃ��\�ł��B
+     * このインスタンスが作られたときのBingoBall型オブジェクトの保持状態に復元します。
+     * 要素が削除されたりした後でもこのメソッドを呼ぶことで初期化された状態に戻すことが可能です。
      */
     public void initialize() {
         balls.clear();

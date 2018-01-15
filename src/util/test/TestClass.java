@@ -1,5 +1,6 @@
 package util.test;
 
+import util.input.InputScanner;
 import util.playingcard.Card;
 import util.playingcard.CardStock;
 import util.playingcard.Hand;
@@ -7,6 +8,15 @@ import util.playingcard.Hand;
 @SuppressWarnings("all")
 public class TestClass {
     public static void main(String[] args) {
+    }
+    private void inputCheck() {
+        InputScanner is = new InputScanner();
+        is.setInMsg("入力 > ");
+        is.setErrMsg("入力が不正です");
+
+        String s = is.inputLineWithCheck()
+    }
+    private void playingcardCheck() {
         Hand hand = new Hand();
         hand.add(new Card(1, 1));
         hand.add(new Card(2, 1));
