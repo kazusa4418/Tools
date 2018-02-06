@@ -2,6 +2,7 @@
   <dictionary name="astar">
     <words>
       <w>mamp</w>
+      <w>pred</w>
       <w>xampp</w>
     </words>
   </dictionary>
