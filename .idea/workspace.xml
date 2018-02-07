@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82fc5c-042e-4207-95fd-d66056d7d57b" name="デフォルト" comment="">
       <change beforePath="$PROJECT_DIR$/src/util/input/InputScanner.java" afterPath="$PROJECT_DIR$/src/util/input/InputScanner.java" />
+      <change beforePath="$PROJECT_DIR$/src/util/test/InputScannerTester.java" afterPath="$PROJECT_DIR$/src/util/test/InputScannerTester.java" />
+      <change beforePath="$PROJECT_DIR$/src/util/test/TestClass.java" afterPath="$PROJECT_DIR$/src/util/test/TestClass.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +25,8 @@
       <file leaf-file-name="InputScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/input/InputScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1099">
-              <caret line="245" column="45" lean-forward="true" selection-start-line="245" selection-start-column="45" selection-end-line="245" selection-end-column="45" />
+            <state relative-caret-position="31668">
+              <caret line="609" column="4" lean-forward="true" selection-start-line="609" selection-start-column="4" selection-end-line="609" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1963#1964#0" expanded="true" />
@@ -35,8 +37,8 @@
                 <element signature="e#3156#3157#0" expanded="true" />
                 <element signature="e#10546#10547#0" expanded="true" />
                 <element signature="e#10580#10581#0" expanded="true" />
-                <element signature="e#18923#18924#0" expanded="true" />
-                <element signature="e#18953#18954#0" expanded="true" />
+                <element signature="e#19093#19094#0" expanded="true" />
+                <element signature="e#19123#19124#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,12 +72,11 @@
       <file leaf-file-name="InputScannerTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/test/InputScannerTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="1092">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2257#2258#0" expanded="true" />
-                <element signature="e#2312#2313#0" expanded="true" />
+                <element signature="e#2254#2255#0" expanded="true" />
+                <element signature="e#2309#2310#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/util/test/TestClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,9 +150,9 @@
         <option value="$USER_HOME$/Desktop/html_practice/chapter2/c02-01/index.html" />
         <option value="$PROJECT_DIR$/src/util/input/InputNotIntegerException.java" />
         <option value="$PROJECT_DIR$/src/util/input/IllegalDataFormatException.java" />
-        <option value="$PROJECT_DIR$/src/util/test/InputScannerTester.java" />
         <option value="$PROJECT_DIR$/src/util/input/_InputScanner.java" />
         <option value="$PROJECT_DIR$/src/util/test/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/util/test/InputScannerTester.java" />
         <option value="$PROJECT_DIR$/src/util/input/InputScanner.java" />
       </list>
     </option>
@@ -271,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="アプリケーション.TestClass (3)">
+  <component name="RunManager" selected="アプリケーション.InputScannerTester">
     <configuration default="true" type="Applet" factoryName="アプレット">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -457,8 +458,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="アプリケーション.TestClass (3)" />
-        <item index="1" class="java.lang.String" itemvalue="アプリケーション.InputScannerTester" />
+        <item index="0" class="java.lang.String" itemvalue="アプリケーション.InputScannerTester" />
+        <item index="1" class="java.lang.String" itemvalue="アプリケーション.TestClass (3)" />
         <item index="2" class="java.lang.String" itemvalue="アプリケーション.Checker" />
         <item index="3" class="java.lang.String" itemvalue="アプリケーション.TestClass (1)" />
       </list>
@@ -484,7 +485,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42251000" />
+    <option name="totallyTimeSpent" value="43408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="2026" extended-state="6" />
@@ -815,31 +816,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/input/_InputScanner.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/test/InputScannerTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/LineNumberReader.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/BufferedReader.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Scanner.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/InputStream.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/System.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/test/TestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -848,10 +829,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/test/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/test/InputScannerTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="e#2309#2310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/input/InputScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1099">
-          <caret line="245" column="45" lean-forward="true" selection-start-line="245" selection-start-column="45" selection-end-line="245" selection-end-column="45" />
+        <state relative-caret-position="31668">
+          <caret line="609" column="4" lean-forward="true" selection-start-line="609" selection-start-column="4" selection-end-line="609" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1963#1964#0" expanded="true" />
@@ -862,8 +862,8 @@
             <element signature="e#3156#3157#0" expanded="true" />
             <element signature="e#10546#10547#0" expanded="true" />
             <element signature="e#10580#10581#0" expanded="true" />
-            <element signature="e#18923#18924#0" expanded="true" />
-            <element signature="e#18953#18954#0" expanded="true" />
+            <element signature="e#19093#19094#0" expanded="true" />
+            <element signature="e#19123#19124#0" expanded="true" />
           </folding>
         </state>
       </provider>

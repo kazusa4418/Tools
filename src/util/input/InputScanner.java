@@ -548,15 +548,10 @@ public final class InputScanner {
      */
     @SafeVarargs
     public final int readCheckedInt(String inMsg, Predicate<Integer>... pred) {
-        boolean flag = true;
-
         int i = readInt(inMsg);
 
-        for (Predicate<Integer> pre : pred) {
-            if (!pre.test(i)) {
-                flag = false;
-            }
-        }
+        boolean flag = checkInCondition(i, pred);
+
         if (flag) {
             return i;
         }
@@ -589,17 +584,11 @@ public final class InputScanner {
      */
     @SafeVarargs
     public final int readCheckedInt(String inMsg, String errMsg, Predicate<Integer>... pred) {
-        boolean flag = true;
-
         while (true) {
             try {
                 int i = readInt(inMsg);
 
-                for (Predicate<Integer> pre : pred) {
-                    if (!pre.test(i)) {
-                        flag = false;
-                    }
-                }
+                boolean flag = checkInCondition(i, pred);
                 if (flag) {
                     return i;
                 }
@@ -611,6 +600,21 @@ public final class InputScanner {
                 System.err.println(errMsg);
             }
         }
+    }
+
+    /* 引数で与えらえたint値が指定されたPredicateの条件式に一致するか検査します。
+     * Predicate配列として受け取ったpredからひとつずつ要素を取り出し、
+     * testメソッドを使って検証していきます。
+     * ひとつでも一致する条件式があればtrueを返却し、すべてに一致しなければ
+     * falseを返却します。*/
+    
+    private boolean checkInCondition(int i, Predicate<Integer>[] pred) {
+        for (Predicate<Integer> p : pred) {
+            if (p.test(i)) {
+                return true;
+            }
+        }
+        return false;
     }
     /* ------------------------------------------------------- */
 

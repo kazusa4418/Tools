@@ -8,7 +8,6 @@ public class InputScannerTester {
     public static void main(String[] args) {
         InputScanner is = new InputScanner();
         is.setIOErrMsg("IOError: error");
-
         System.out.println("---- STRING INPUT TEST ----");
         writeLine("readStr()test");
         String s = is.readStr();
@@ -18,7 +17,7 @@ public class InputScannerTester {
         String s1 = is.readStr("readStr > ");
         result(s1);
 
-        writeLine("readCheckedStr(String inMsg, Pattern... p");
+        writeLine("readCheckedStr(String inMsg, Pattern... p)");
         String s2 = is.readCheckedStr("readStr > ", Pattern.compile("[0-9]+"));
         result(s2);
 
@@ -52,7 +51,7 @@ public class InputScannerTester {
         result(i4);
 
         writeLine("readCheckedInt(String inMsg, String errMsg, Predicate<Integer> pred)test");
-        int i5 = is.readCheckedInt("input int > ", "error try again.", x -> x <= 100, x -> x >= 0);
+        int i5 = is.readCheckedInt("input int > ", "error try again.", x -> x <= 100 && x >= 0);
         result(i5);
 
 
