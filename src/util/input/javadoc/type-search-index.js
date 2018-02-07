@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"IllegalDataFormatException","h":"","u":""},{"l":"InputScanner","h":"","u":""}]

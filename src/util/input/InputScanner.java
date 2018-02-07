@@ -16,7 +16,7 @@ import java.util.stream.Stream;
  * <p>デフォルトの{@code InputScanner}は引数に{@code InputStreamReader(System.in)}
  * を与えた{@code BufferedReader}と似た使い方ができますが、より実用的な使用ができます。</p>
  *
- * 具体的にはｷｰﾎﾞｰﾄﾞから入力をする際に入力を受け付けるまえにテキストを表示したり、
+ * <p>具体的にはｷｰﾎﾞｰﾄﾞから入力をする際に入力を受け付けるまえにテキストを表示したり、
  * 正規表現に一致したテキスト行のみを受け付ける、一致しなかった場合エラーメッセージを
  * 表示して再入力を求めるといった処理を簡単に実現することができます。</p>
  *
@@ -117,13 +117,13 @@ public final class InputScanner {
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     String text = is.readStr("input > ");
+     *     String text = is.readStr({@code "input > "});
      * </pre>
      * 上記の処理を{@link #readStr()}で実装した場合が下記のコードです。
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     System.our.print("input > ");
+     *     System.our.print({@code "input > "});
      *     String text = is.readStr();
      * </pre>
      *
@@ -155,12 +155,12 @@ public final class InputScanner {
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     String text = is.readCheckedStr("input > ",
+     *     String text = is.readCheckedStr({@code "input > "},
      *                                     "[0-9]+",
      *                                     "[a-zA-Z]+");
      *
      * </pre>
-     * <p>上記の例では、最初に"input > "と出力した後、
+     * <p>上記の例では、最初に{@code "input > "}と出力した後、
      * 数字のみ、またはローマ字のみで構成された文字列のみの
      * テキスト行を読み込みます。<br>
      * "123"や"abc"といった文字列は正規表現に一致するので読み込みますが、
@@ -226,16 +226,16 @@ public final class InputScanner {
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     String text = is.readStrUntilMatch("input > ",
+     *     String text = is.readStrUntilMatch({@code "input > "},
      *                                        "error try again.",
      *                                        "[0-9]+",
      *                                        "[a-zA-Z]+");
      * </pre>
      *
-     * <p>上記の例では、最初に"input > "と出力した後、テキスト行を読み込み
+     * <p>上記の例では、最初に{@code "input > "}と出力した後、テキスト行を読み込み
      * 指定された正規表現と一致しているか検証します。
      * 一致していればテキスト行が返却され、不一致の場合はエラーメッセージを出力し、
-     * 再度 "input > "と出力した後、テキスト行を読み込みます。
+     * 再度 {@code "input > "}と出力した後、テキスト行を読み込みます。
      * これを正規表現に一致するまで繰り返します。<br>
      * この例の場合は、数字のみで構成されたテキスト行かアルファベットのみで
      * 構成されたテキスト行の場合、正規表現と一致します。</p>
@@ -349,14 +349,14 @@ public final class InputScanner {
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     int i = is.readInt("input > ");
+     *     int i = is.readInt({@code "input > "});
      * </pre>
      *
      * 上記のコードを{@link #readInt()}を用いて実装すると以下になります。
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     System.out.println("input > ");
+     *     System.out.println({@code "input > "});
      *     int i = is.readInt();
      * </pre>
      *
@@ -387,14 +387,14 @@ public final class InputScanner {
      *
      * <pre>
      *     InputScanner is = new InputScanner();
-     *     int i = is.readInt("input > ", "error try again.");
+     *     int i = is.readInt({@code "input > "}, "error try again.");
      * </pre>
      *
-     * <p>上記の例では、まず "input > "と出力し、その後テキスト行を読みます。
+     * <p>上記の例では、まず {@code "input > "}と出力し、その後テキスト行を読みます。
      * 読み込んだテキスト行がInteger正規表現に一致すればint型に構文解析され、
      * 返却されます。
      * 一致しなかった場合は、エラーメッセージ "error try again." を出力し、
-     * 再度 "input > "を出力してさらにテキスト行を読み込みます。<br>
+     * 再度 {@code "input > "}を出力してさらにテキスト行を読み込みます。<br>
      * これを繰り返します。</p>
      *
      * @param inMsg  テキスト行を読み込む前に出力するメッセージ
@@ -486,8 +486,8 @@ public final class InputScanner {
      * 一致している場合はそのまま返却、一致していなかった場合は
      * 例外がスローされます。</p>
      *
-     * <p>条件式は{@link Predicate<Integer>}で指定します。<br>
-     * {@link Predicate<Integer>}を継承し、{@link Predicate#test(Object)}
+     * <p>条件式は{@link Predicate}で指定します。<br>
+     * {@link Predicate}を継承し、{@link Predicate#test(Object)}
      * メソッドをオーバーライドした独自のクラスを作るか、ラムダ式または
      * メソッド参照で条件を指定することが可能です。
      * </p>
@@ -498,9 +498,9 @@ public final class InputScanner {
      *     独自クラス : SubPredicate
      *     条件　　　 : 0 ~ 100までの値のみ読み込む
      *
-     *     public class SubPredicate extends Predicate<Integer> {
+     *     public class SubPredicate extends Predicate{@code <Integer>} {
      *         public boolean test(int x) {
-     *             if (x >= 0 && x <= 100) {
+     *             if ({@code x >= 0 && x <= 100}) {
      *                 return true;
      *             }
      *             else {
@@ -518,7 +518,7 @@ public final class InputScanner {
      *             InputScanner is = new InputScanner();
      *             SubPredicate sp = new SubPredicate();
      *
-     *             int i = is.readCheckedInt("input > ", sp);
+     *             int i = is.readCheckedInt({@code "input > ", sp});
      *         }
      *     }
      * </pre>
@@ -533,7 +533,7 @@ public final class InputScanner {
      *     public class Test {
      *         public static void main(String[] args) {
      *             InputScanner is = new InputScanner();
-     *             int i = is.readCheckedInt("input > ", x -> x >= 0 && x <= 100);
+     *             int i = is.readCheckedInt({@code "input > ", x -> x >= 0 && x <= 100});
      *         }
      *     }
      * </pre>
@@ -607,7 +607,7 @@ public final class InputScanner {
      * testメソッドを使って検証していきます。
      * ひとつでも一致する条件式があればtrueを返却し、すべてに一致しなければ
      * falseを返却します。*/
-    
+
     private boolean checkInCondition(int i, Predicate<Integer>[] pred) {
         for (Predicate<Integer> p : pred) {
             if (p.test(i)) {
