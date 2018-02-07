@@ -200,8 +200,10 @@ public final class InputScanner {
     public String readCheckedStr(String inMsg, Pattern... patterns) {
         String s = readStr(inMsg);
 
+        /* 読み込んだ文字列が正規表現に一致しているか検証する */
         boolean flag = checkPatternMatch(s, patterns);
 
+        /* 一致していればtrue 不一致ならばfalse */
         if (flag) {
             return s;
         }
@@ -248,6 +250,7 @@ public final class InputScanner {
      */
     //TODO:可変長引数になっているせいでpatternsが指定されなかったときに競合する問題を修正する
     public String readStrUntilMatch(String inMsg, String errMsg, String... patterns) {
+        /* String型で与えられた正規表現をPattern型配列に変換 */
         Stream<String> stream = Arrays.stream(patterns);
         Pattern[] p = stream.map(Pattern::compile).toArray(Pattern[]::new);
 
@@ -271,8 +274,10 @@ public final class InputScanner {
     //TODO:可変長引数になっているせいでpatternsが指定されなかったときに競合する問題を修正する
     public String readStrUntilMatch(String inMsg, String errMsg, Pattern... patterns) {
         while (true) {
+            /* 正規表現に一致しているか検査つきでテキスト行を読み込む */
             String s = readCheckedStr(inMsg, patterns);
 
+            /* 不一致ならば空文字が返却されるのでisEmpty()で空文字が調べる */
             if (!s.isEmpty()) {
                 return s;
             }
