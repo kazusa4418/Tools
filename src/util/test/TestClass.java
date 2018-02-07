@@ -1,18 +1,16 @@
 package util.test;
 
-import util.input.InputScanner;
-
 @SuppressWarnings("all")
 public class TestClass {
 
     public static void main(String[] args) {
-        InputScanner is = new InputScanner();
+        show("integer");
+    }
 
-        int i = is.checkedInputInt("input > ",
-                                  "error: try again.",
-                                          x -> x > 100);
-        System.out.println(i);
-
+    private static void show(String... args) {
+        for (String arg : args) {
+            System.out.println(arg);
+        }
     }
 
 
