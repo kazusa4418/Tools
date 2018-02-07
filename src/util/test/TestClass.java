@@ -4,14 +4,11 @@ package util.test;
 public class TestClass {
 
     public static void main(String[] args) {
-        show("integer");
+        String s = "みねしまかずきです\rクラシック音楽がすきです\naaa\rよろしくおねがいします";
+        System.out.println(s);
     }
 
-    private static void show(String... args) {
-        for (String arg : args) {
-            System.out.println(arg);
-        }
-    }
+
 
 
 }
