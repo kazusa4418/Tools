@@ -46,12 +46,12 @@ public class InputScannerTester {
         int i3 = is.readInt("input int > ", "error try again.");
         result(i3);
 
-        writeLine("readCheckedInt(String msg, Predicate<Integer> pred)test");
+        writeLine("readIntUntilMatch(String msg, Predicate<Integer> pred)test");
         int i4 = is.readCheckedInt("input int > ", x -> x <= 100, x -> x >= 0);
         result(i4);
 
-        writeLine("readCheckedInt(String inMsg, String errMsg, Predicate<Integer> pred)test");
-        int i5 = is.readCheckedInt("input int > ", "error try again.", x -> x <= 100 && x >= 0);
+        writeLine("readIntUntilMatch(String inMsg, String errMsg, Predicate<Integer> pred)test");
+        int i5 = is.readIntUntilMatch("input int > ", "error try again.", x -> x <= 100 && x >= 0);
         result(i5);
 
 
