@@ -9,35 +9,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a82fc5c-042e-4207-95fd-d66056d7d57b" name="デフォルト" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/util/parser/Parser.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tools/util/input/InputScanner.class" afterPath="$PROJECT_DIR$/out/production/Tools/util/input/InputScanner.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tools/util/test/InputScannerTester.class" afterPath="$PROJECT_DIR$/out/production/Tools/util/test/InputScannerTester.class" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/InputScanner.java" afterPath="$PROJECT_DIR$/src/util/input/InputScanner.java" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/README.txt" afterPath="$PROJECT_DIR$/src/util/input/README.txt" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/allclasses-frame.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/allclasses-noframe.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/constant-values.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/deprecated-list.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/help-doc.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-1.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-2.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-3.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/index-files/index-4.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/index.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/member-search-index.js" afterPath="$PROJECT_DIR$/src/util/input/javadoc/member-search-index.js" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/member-search-index.zip" afterPath="$PROJECT_DIR$/src/util/input/javadoc/member-search-index.zip" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/overview-tree.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/package-search-index.zip" afterPath="$PROJECT_DIR$/src/util/input/javadoc/package-search-index.zip" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/serialized-form.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/type-search-index.js" afterPath="$PROJECT_DIR$/src/util/input/javadoc/type-search-index.js" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/type-search-index.zip" afterPath="$PROJECT_DIR$/src/util/input/javadoc/type-search-index.zip" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/util/input/IllegalDataFormatException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/util/input/InputScanner.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/util/input/InputScanner.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-frame.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-frame.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-summary.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-summary.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-tree.html" afterPath="$PROJECT_DIR$/src/util/input/javadoc/util/input/package-tree.html" />
-      <change beforePath="$PROJECT_DIR$/src/util/test/InputScannerTester.java" afterPath="$PROJECT_DIR$/src/util/test/InputScannerTester.java" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/IllegalDataFormatException.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/InputScanner.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/README.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/allclasses-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/allclasses-noframe.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/constant-values.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/deprecated-list.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/help-doc.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index-files/index-1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index-files/index-2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index-files/index-3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index-files/index-4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index-files/index-5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/external/jquery/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-icons_454545_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-icons_888888_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-1.10.2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.structure.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jquery-ui.structure.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip-utils/dist/jszip-utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip/dist/jszip.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/jquery/jszip/dist/jszip.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/member-search-index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/member-search-index.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/overview-tree.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/package-list" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/package-search-index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/package-search-index.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/resources/glass.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/resources/x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/search.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/type-search-index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/type-search-index.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/util/input/InputScanner.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/util/input/package-frame.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/util/input/package-summary.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadoc/util/input/package-tree.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/javadocの場所.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/readOnlySeter.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/util/input/util/input/readOnlySeter.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +89,8 @@
       <file leaf-file-name="InputScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/input/InputScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-431">
-              <caret line="2011" column="51" lean-forward="false" selection-start-line="2011" selection-start-column="51" selection-end-line="2011" selection-end-column="51" />
+            <state relative-caret-position="683">
+              <caret line="1936" column="7" lean-forward="true" selection-start-line="1936" selection-start-column="7" selection-end-line="1936" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3451#3452#0" expanded="true" />
@@ -69,13 +103,24 @@
                 <element signature="e#12303#12304#0" expanded="true" />
                 <element signature="e#22481#22482#0" expanded="true" />
                 <element signature="e#22516#22517#0" expanded="true" />
-                <element signature="e#45162#45189#0" expanded="true" />
                 <element signature="e#51488#51489#0" expanded="true" />
                 <element signature="e#51535#51536#0" expanded="true" />
                 <element signature="e#53558#53559#0" expanded="true" />
                 <element signature="e#53615#53616#0" expanded="true" />
                 <element signature="e#60336#60337#0" expanded="true" />
                 <element signature="e#60366#60367#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/parser/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,7 +169,7 @@
       <file leaf-file-name="InputScannerTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/test/InputScannerTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="9880">
               <caret line="192" column="20" lean-forward="false" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
               <folding>
                 <element signature="e#6995#6996#0" expanded="true" />
@@ -211,6 +256,7 @@
         <option value="$PROJECT_DIR$/src/util/test/TestClass.java" />
         <option value="$PROJECT_DIR$/src/util/test/InputScannerTester.java" />
         <option value="$PROJECT_DIR$/src/util/input/InputScanner.java" />
+        <option value="$PROJECT_DIR$/src/util/parser/Parser.java" />
       </list>
     </option>
   </component>
@@ -259,6 +305,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,14 +344,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../新しいフォルダー" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="nele.options" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -543,11 +589,12 @@
       <workItem from="1518494809534" duration="5688000" />
       <workItem from="1518504880973" duration="535000" />
       <workItem from="1518499376770" duration="4464000" />
+      <workItem from="1518512736221" duration="2023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122657000" />
+    <option name="totallyTimeSpent" value="124680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="2026" extended-state="6" />
@@ -555,7 +602,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328911" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -568,7 +614,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -582,7 +627,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="UI デザイナー" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="デザイナー" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328911" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="キャプチャー分析" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -625,13 +672,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/manager/ConsoleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/manager/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
@@ -912,7 +952,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/test/InputScannerTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="9880">
           <caret line="192" column="20" lean-forward="false" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
           <folding>
             <element signature="e#6995#6996#0" expanded="true" />
@@ -923,10 +963,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/input/InputScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
-          <caret line="2011" column="51" lean-forward="false" selection-start-line="2011" selection-start-column="51" selection-end-line="2011" selection-end-column="51" />
+        <state relative-caret-position="683">
+          <caret line="1936" column="7" lean-forward="true" selection-start-line="1936" selection-start-column="7" selection-end-line="1936" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3451#3452#0" expanded="true" />
@@ -939,7 +989,6 @@
             <element signature="e#12303#12304#0" expanded="true" />
             <element signature="e#22481#22482#0" expanded="true" />
             <element signature="e#22516#22517#0" expanded="true" />
-            <element signature="e#45162#45189#0" expanded="true" />
             <element signature="e#51488#51489#0" expanded="true" />
             <element signature="e#51535#51536#0" expanded="true" />
             <element signature="e#53558#53559#0" expanded="true" />

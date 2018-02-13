@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"InputScanner","h":"","u":""}]
